@@ -1,18 +1,45 @@
 // Quiz data categorized by difficulty
 const questions = {
   easy: [
-    { question: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correct: 1 },
-    { question: "What color is the sky?", answers: ["Green", "Blue", "Red", "Yellow"], correct: 1 },
+    { question: "What is the output of print(2 + 2)?", answers: ["2", "3", "4", "5"], correct: 2 },
+    { question: "Which keyword is used to define a function in Python?", answers: ["func", "def", "function", "lambda"], correct: 1 },
+    { question: "What is the correct file extension for Python files?", answers: [".py", ".python", ".pt", ".pyt"], correct: 0 },
+    { question: "Which of these is a valid variable name?", answers: ["2name", "name", "name!", "name@"], correct: 1 },
+    { question: "What is the data type of 'Hello, World!' in Python?", answers: ["String", "List", "Integer", "Boolean"], correct: 0 },
+    { question: "Which function is used to output text in Python?", answers: ["print()", "echo()", "display()", "show()"], correct: 0 },
+    { question: "What is the result of len('Python')?", answers: ["6", "5", "7", "8"], correct: 0 },
+    { question: "What is used to insert comments in Python?", answers: ["//", "#", "/* */", "--"], correct: 1 },
+    { question: "Which keyword is used for loops in Python?", answers: ["loop", "for", "iterate", "repeat"], correct: 1 },
+    { question: "How do you declare a variable in Python?", answers: ["var x = 5", "x = 5", "int x = 5", "x := 5"], correct: 1 },
   ],
-  medium: [
-    { question: "Which planet is known as the Red Planet?", answers: ["Earth", "Mars", "Jupiter", "Venus"], correct: 1 },
-    { question: "Who wrote 'Romeo and Juliet'?", answers: ["Shakespeare", "Hemingway", "Frost", "Poe"], correct: 0 },
+
+   medium: [
+    { question: "What does the following code return: 'Python'.upper()?", answers: ["PYTHON", "Python", "python", "None"], correct: 0 },
+    { question: "Which of these data types is immutable?", answers: ["List", "Dictionary", "String", "Set"], correct: 2 },
+    { question: "How do you handle exceptions in Python?", answers: ["try-catch", "try-except", "try-finally", "try-error"], correct: 1 },
+    { question: "What is the result of 10 // 3 in Python?", answers: ["3", "3.33", "4", "Error"], correct: 0 },
+    { question: "Which method is used to add an element to a set?", answers: ["add()", "append()", "insert()", "extend()"], correct: 0 },
+    { question: "How do you create a dictionary in Python?", answers: ["{}", "[]", "()", "<>"], correct: 0 },
+    { question: "Which module is used for random number generation?", answers: ["math", "random", "os", "sys"], correct: 1 },
+    { question: "What is the output of print(type([]))?", answers: ["<class 'list'>", "<class 'dict'>", "<class 'tuple'>", "<class 'set'>"], correct: 0 },
+    { question: "What does the 'pass' statement do?", answers: ["Exits a loop", "Does nothing", "Skips an iteration", "Ends a function"], correct: 1 },
+    { question: "What will the expression 5 == 5 return?", answers: ["True", "False", "Error", "None"], correct: 0 },
   ],
+
   hard: [
-    { question: "What is the derivative of sin(x)?", answers: ["cos(x)", "-cos(x)", "-sin(x)", "tan(x)"], correct: 0 },
-    { question: "Who developed the theory of relativity?", answers: ["Newton", "Bohr", "Einstein", "Tesla"], correct: 2 },
-  ]
+    { question: "What is the output of the following: `lambda x: x**2`(3)?", answers: ["3", "6", "9", "Error"], correct: 2 },
+    { question: "How do you access the first element of a tuple `(10, 20, 30)`?", answers: ["tuple[0]", "tuple(0)", "tuple.first()", "Error"], correct: 0 },
+    { question: "Which function converts an object to a string representation?", answers: ["repr()", "str()", "toString()", "string()"], correct: 1 },
+    { question: "How do you create a generator in Python?", answers: ["def with return", "def with yield", "generator()", "create()"], correct: 1 },
+    { question: "Which library is used for data manipulation in Python?", answers: ["numpy", "matplotlib", "pandas", "scipy"], correct: 2 },
+    { question: "What is the result of `sum([1, 2, 3, 4])`?", answers: ["10", "11", "12", "13"], correct: 0 },
+    { question: "What is the correct way to open a file for writing?", answers: ["open('file.txt')", "open('file.txt', 'r')", "open('file.txt', 'w')", "open('file.txt', 'a')"], correct: 2 },
+    { question: "What is the difference between `is` and `==`?", answers: ["No difference", "`is` checks identity, `==` checks equality", "`is` checks equality, `==` checks identity", "Both are used for loops"], correct: 1 },
+    { question: "Which decorator is used to define a static method?", answers: ["@staticmethod", "@class", "@classmethod", "@static"], correct: 0 },
+    { question: "What is the result of `{'a':1, 'b':2}['c']`?", answers: ["KeyError", "None", "0", "Undefined"], correct: 0 },
+  ],
 };
+
 
 let currentDifficulty = 'easy';
 let currentQuestionIndex = 0;
